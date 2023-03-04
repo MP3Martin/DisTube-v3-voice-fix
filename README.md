@@ -1,3 +1,7 @@
+# **This fork fixes random freeze when playing a song.**
+
+<br><br>
+
 <div align="center">
   <p>
     <a href="https://nodei.co/npm/distube/"><img src="https://nodei.co/npm/distube.png?downloads=true&downloadRank=true&stars=true"></a>
@@ -43,7 +47,7 @@ A Discord.js module to simplify your music commands and play songs with audio fi
 ## Installation
 
 ```npm
-npm install distube@latest
+npm install @mp3martin/distube
 ```
 
 ## Documentation

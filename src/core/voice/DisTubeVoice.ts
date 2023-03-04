@@ -93,12 +93,18 @@ export class DisTubeVoice extends TypedEmitter<DisTubeVoiceEvents> {
     this.#channel = channel;
   }
   #join(channel: VoiceBasedChannel) {
-    return joinVoiceChannel({
+    const voiceConnection = joinVoiceChannel({
       channelId: channel.id,
       guildId: this.id,
       group: channel.client.user?.id,
       adapterCreator: (channel.guild.voiceAdapterCreator as any) || createDiscordJSAdapter(channel as any),
     });
+    voiceConnection.on("stateChange", (old_state: any, new_state: any) => {
+      if (old_state.status === VoiceConnectionStatus.Ready && new_state.status === VoiceConnectionStatus.Connecting) {
+        voiceConnection.configureNetworking();
+      }
+    });
+    return voiceConnection;
   }
   /**
    * Join a voice channel with this connection
