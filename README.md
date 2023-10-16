@@ -1,6 +1,6 @@
 # **This fork fixes random freeze when playing a song.**
 
-# **Edit: Please don't use this, instead update to [Distube v4](https://distube.js.org/guide/additional-info/update.html#updating-from-v3-to-v4)**
+# **Edit: Please don't use this, instead [update to Distube v4](https://distube.js.org/guide/additional-info/update.html#updating-from-v3-to-v4)**
 
 <br><br>
 
